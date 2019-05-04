@@ -1,9 +1,6 @@
-PREFIX ?= /usr/local
 USER_ROOT = `pwd`/debian/hustoj
 HUSTOJ_ROOT = $(USER_ROOT)/home/judge
 
-prepare:
-	mv /hustoj/trunk/* .
 
 judged:
 	cd core/judged \
