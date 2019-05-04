@@ -19,5 +19,5 @@ RUN bash /tmp/config.sh install
 RUN bash /tmp/config.sh config
 
 RUN apt install build-essential dh-make devscripts dpkg-dev debhelper quilt lintian -y
-RUN cd /root && https://github.com/muzea/hustoj-deb.git && mv hustoj-0.0.1 && mv /hustoj/trunk/* /root/hustoj-0.0.1
+RUN cd /root && git clone https://github.com/muzea/hustoj-deb.git && mv hustoj-deb hustoj-0.0.1 && mv /hustoj/trunk/* /root/hustoj-0.0.1
 
