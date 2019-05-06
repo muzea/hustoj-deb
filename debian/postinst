@@ -23,6 +23,7 @@ HUSTOJ_ROOT='/home/judge'
 
 case "$1" in
     configure)
+    
     mysql -h localhost -u$DB_USER -p$DB_PASSWORD < $HUSTOJ_ROOT/sql/db.sql
     ln -s /home/judge/etc/nginx.conf /etc/nginx/conf.d/hustoj.conf
     sed -i "s/OJ_USER_NAME=root/OJ_USER_NAME=$DB_USER/g" $HUSTOJ_ROOT/etc/judge.conf
