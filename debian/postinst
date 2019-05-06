@@ -23,13 +23,14 @@ HUSTOJ_ROOT='/home/judge'
 
 case "$1" in
     configure)
-    
     mysql -h localhost -u$DB_USER -p$DB_PASSWORD < $HUSTOJ_ROOT/sql/db.sql
     ln -s /home/judge/etc/nginx.conf /etc/nginx/conf.d/hustoj.conf
     sed -i "s/OJ_USER_NAME=root/OJ_USER_NAME=$DB_USER/g" $HUSTOJ_ROOT/etc/judge.conf
     sed -i "s/OJ_PASSWORD=root/OJ_PASSWORD=$DB_PASSWORD/g" $HUSTOJ_ROOT/etc/judge.conf
     sed -i "s/DB_USER=\"root\"/DB_USER=\"$DB_USER\"/g" $HUSTOJ_ROOT/src/web/include/db_info.inc.php
     sed -i "s/DB_PASS=\"root\"/DB_PASS=\"$DB_PASSWORD\"/g" $HUSTOJ_ROOT/src/web/include/db_info.inc.php
+    chmod 775 -R /home/judge/data && chgrp -R www-data /home/judge/data
+    chown www-data:www-data -R /home/judge/src/web/
     /etc/init.d/nginx restart
     ;;
 
