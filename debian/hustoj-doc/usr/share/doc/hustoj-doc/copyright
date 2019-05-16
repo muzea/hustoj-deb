@@ -1,14 +1,14 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: hustoj
-Source: <url://example.com>
+Source: <https://github.com/zhblue/hustoj>
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Copyright: <2008> <sempr>
+           <2009-2019> <newsclan@gmail.com>
 License: GPL-3.0+
 
 Files: debian/*
-Copyright: 2019 root <root@8cd5d0335933>
+Copyright: 2019 zhblue <newsclan@gmail.com>
 License: GPL-3.0+
 
 License: GPL-3.0+
