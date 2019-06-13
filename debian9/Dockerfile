@@ -16,3 +16,4 @@ RUN set -ex \
 COPY build.sh /root/build.sh
 
 RUN apt install build-essential dh-make devscripts dpkg-dev debhelper quilt lintian -y
+RUN chmod +x /root/build.sh

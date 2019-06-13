@@ -9,8 +9,7 @@ set -ex \
 && cd hustoj \
 && git checkout $TRAVIS_TAG \
 && cd /root \
-&& git clone https://github.com/muzea/hustoj-deb.git \
-# && mv hustoj-deb-ubuntu18 hustoj-${VERSION} \
+&& git clone -b $SCRIPT_BRANCH https://github.com/muzea/hustoj-deb.git \
 && mkdir -p $BUILDDIR \
 && cp -R /root/hustoj-deb/common $BUILDDIR \
 && cp -RT /root/hustoj-deb/${DISTRIBUTION} $BUILDDIR \
