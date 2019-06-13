@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+steps:
+- name: debian8
+  image: plugins/docker
+  settings:
+    username: mr.muzea@gmail.com
+    password:
+      from_secret: password
+    repo: woodenfish42/hustoj-deb
+    tags: debian8-dev
+    dockerfile: debian8/Dockerfile
