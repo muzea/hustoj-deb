@@ -1,0 +1,15 @@
+Source: hustoj
+Section: unknown
+Priority: optional
+Maintainer: zhblue <newsclan@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: <https://github.com/zhblue/hustoj>
+#Vcs-Git: https://github.com/zhblue/hustoj.git
+#Vcs-Browser: https://github.com/zhblue/hustoj.git
+
+Package: hustoj
+Architecture: any
+Depends: nginx, php-common, php-mbstring, php-mysql, php-gd, php-fpm, php-xml, php-zip, mysql-server, gcc, libmysql++-dev
+Description: <Open Source Online Judge System founded in HUST>
+ <open source, compatible with freeproblemset>
